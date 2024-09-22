@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>T’ikraq - Home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/home-page.css">
+	<link rel="icon" href="assets/logo.png" type="image/png">
+	<script>
+		function toggleOptionList(){
+		
+			var element = document.getElementById("option-list");
+
+			if (element.style.display.length == 0){
+				element.style.display = "block";
+				return
+			}
+			
+			if (element.style.display == "none"){
+				element.style.display = "block";
+			}else{
+				element.style.display = "none";
+			}
+
+		}
+	</script>
+</head>
+
+
+<body>
+
+	<nav>
+		<img src="assets/logo.png" height="70" width="80" />
+
+		<a class = "nav-block" href="register/index.html" class="register-button">Regístrate</a>
+		<a class = "nav-block" href="contact/index.html" class="contact-button">Contáctanos</a>
+		<a class = "nav-block" href="translate/index.html" class="translate-button">Traductor</a>
+		<a class = "nav-block" href="subscription/index.html" class="suscription-button">Suscripciones</a>
+		<a class = "nav-block" href="learn/index.html" class="learn-button">Aprender</a>
+		<a class = "nav-block"href="about-me/index.html" class="about-me-button">Sobre nosotros</a>
+		<a class = "nav-block"href="qualify/index.html" class="about-me-button">Calificanos</a>
+		<img class = "menu"  onclick = "toggleOptionList()" src = "assets/lesson/menu.png" height="70" width= "85" /> 
+		
+		<div class = "option-list" id = "option-list">
+			<p class = "nav-block" href="register/index.html" class="register-button">Regístrate</a>
+			<p class = "nav-block" href="contact/index.html" class="contact-button">Contáctanos</a>
+			<p class = "nav-block" href="translate/index.html" class="translate-button">Traductor</a>
+			<p class = "nav-block" href="subscription/index.html" class="suscription-button">Suscripciones</a>
+			<p class = "nav-block" href="learn/index.html" class="learn-button">Aprender</a>
+			<p class = "nav-block" href="about-me/index.html" class="about-me-button">Sobre nosotros</a>
+			<a class = "nav-block"href="qualify/index.html" class="about-me-button">Calificanos</a>
+
+		</div>
+	</nav>
+
+	<section  class="main_container">
+
+		<!-- Information -->
+		<div class = "web-info">
+		
+			<header>
+				<h1 class = "web-title">Traduce a lengua nativa!</h1>
+			</header>
+			<p class = "web-description">Es una herramienta que otorgue la
+			facilidad de traducir lenguas nativas
+			a las personas que necesiten
+			comunicarse de manera más 
+			eficiente.</p>
+			
+	
+		</div>
+
+		<!-- Image background -->
+		<img class = "image" src = "assets/image.png" height="340" width= "670" /> 
+
+	</section>
+
+	<!-- Social media -->
+	<footer>
+		<h1 class = "social-title">¡Síguenos!</h1>
+
+		<div class = "social-media">
+			
+			<img src = "assets/instagram.png" height="100" width= "100" /> 
+			<img src = "assets/facebook.png" height="100" width= "100" /> 
+			<img src = "assets/x.png" height="95" width= "95" /> 			
+		</div>
+
+	</footer>
+</body>
+</html>

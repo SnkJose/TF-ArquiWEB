@@ -1,0 +1,215 @@
+
+
+a{
+	color: black;
+	text-decoration: none;
+}
+
+body{
+	background-color: #f4f4f4;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Montserrat, sans-serif;
+}
+.main_container{
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+header{
+	display: flex;
+	gap: 15px;
+}
+
+section{
+	
+	margin-left: 40px;
+}
+
+
+h1.page-title{
+	background: #88D3FF;
+	border: 10px solid #88D3FF;
+	border-radius: 20px;
+	padding: 0 10px;
+}
+
+.status{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+h1.learn-info{
+	background: #ECFF6A;
+	border: 10px solid #ECFF6A;
+	border-radius: 20px;
+	padding: 0 10px;
+}
+
+.learn-data{
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	margin-bottom: 3.25em;
+}
+
+p.learn-percentage{
+
+	font-size: 24.5px;
+
+	background-color: #D9D9D9;
+	border: 10px solid #D9D9D9;
+	border-radius: 20px;
+	padding: 0 20px;
+}
+
+.progress-section{
+
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	margin-right: 50px;
+	height: 10%;
+}
+
+h1.progress-title{
+	background-color: #F5A940;
+	border: 10px solid #F5A940;
+	border-radius: 50px;
+
+	padding: 5px;
+}
+
+
+p.progress-data{
+
+	font-size: 30px;
+
+	background-color: #FFFD91;
+	border: 10px solid #FFFD91;
+	border-radius: 50px;
+
+	padding:  5px;
+}
+
+
+p.learn-button{
+
+	font-size: 21px;
+
+	text-align: center;
+
+
+	background-color: #5CE1E6;
+	border: 10px solid #5CE1E6;
+	border-radius: 50px;
+	
+	padding: 5px 0;
+
+	width: 14.5em;
+	cursor: pointer;
+}
+
+
+.lesson-section{
+	position: absolute;
+	left: 25em;
+	top: 19em;
+
+	overflow: scroll;
+
+	height: 34%;
+}
+
+
+.data-section{
+
+	display: flex;
+	justify-content: space-between;
+
+	margin-top: 3em;
+
+}
+
+.time-title{
+
+	display: flex;
+	align-items: center;
+
+	gap: 5px;
+}
+
+h1.title-block{
+
+	background-color: #F5A940;
+	border: 10px solid #F5A940;
+	border-radius: 50px;
+	
+	margin-bottom: 10px;
+	padding: 5px;
+
+}
+h1.time-about{
+
+
+	background-color: #FFFD91;
+	border: 10px solid #FFFD91;
+	border-radius: 50px;
+	
+	padding: 10px;
+
+	height: 4em;
+	width: 11.5em;
+}
+
+.statistic-section{
+	margin-top: 15px;
+	margin-right: 40px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+
+
+}
+
+.statistic-title{
+	text-align: center;
+
+	background-color: #F5A940;
+	border: 10px solid #F5A940;
+	border-radius: 50px;
+	
+	padding: 5px;
+	width: 7.5em;
+	margin-bottom: 0px;
+
+}
+
+.statistic-last-time{
+	text-align: center;
+
+	background-color: #FFFD91;
+	border: 10px solid #FFFD91;
+	border-radius: 50px;
+	
+	padding: 5px;
+	width: 6em;
+	margin-bottom: 0px;
+
+}
+
+.statistic-data{
+
+	white-space: pre-line;
+
+	background-color: #FFFD91;
+	border: 10px solid #FFFD91;
+	border-radius: 50px;
+	
+	padding: 10px;
+}

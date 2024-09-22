@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>T’ikraq - Translate</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/translate-page.css">
+	<link rel="icon" href="../assets/logo.png" type="image/png">
+
+	<script>
+
+		var toTranslate = "qu";
+
+		function enableHover(hoverId) {
+			
+			var element = document.getElementById(hoverId);
+			if (element.hasAttribute("hidden")){
+				element.removeAttribute("hidden");
+			}else{
+				element.setAttribute("hidden", "true");
+
+			}
+
+		}
+
+		function translateText(){
+			
+			var text = document.getElementById("from-translate-input").textContent
+			var request = new XMLHttpRequest();
+			var link = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=es&tl=" + toTranslate +  "&dt=t&q=";
+			console.log("Text to translate: " + text);
+			request.open("POST", link + encodeURIComponent(text));
+
+			request.send();
+
+			request.onload = function() {
+
+  				if (request.status === 200) {
+    			
+    				var translationResult = JSON.parse(request.responseText)[0][0][0];
+    				document.getElementById("to-translate-input").textContent = translationResult;
+    				console.log("Translated!")
+
+  				} else {
+	   				console.log("Error: " + request.statusText);
+  				}
+			};
+		}
+
+		function changeTranslate(language, hoverId){
+
+			var element = document.getElementById(hoverId);
+			element.setAttribute("hidden", "true");
+			
+			toTranslate = language;
+
+			var languageName = "";
+
+			switch(toTranslate){
+				case "qu":
+					languageName = "quechua";
+					break;
+				case "ay":
+					languageName = "aymara";
+					break;
+				case "es":
+					languageName = "español";
+					break;
+				default:
+					console.log("Error: " + toTranslate);
+			}
+
+
+			var languageElement = document.getElementById("language-name");
+
+			languageElement.textContent = languageName;
+
+			console.log("Changed language: " + toTranslate);
+
+		}
+	</script>
+</head>
+
+
+<body>
+	<footer>
+		<div class = "footer-about-section">
+			<a class = "logo" href = "../index.html">
+				<img src = "../assets/logo.png" height="80" width= "90"/> 
+			</a>
+			<h1 class = "page-title">Panel de control</h1>
+		</div>
+		<div class = "footer-profile-section">
+			<a class = "logo" href = "../settings/index.html">
+				<img src = "../assets/config.png" height="80" width= "90"/> 
+			</a>
+			<a href="../editar-perfil/index.html">
+				<img src = "../assets/profile.png" height="80" width= "90"/> 
+			</a>
+			
+		</div>
+	</footer>
+	<section>
+
+		<div class = "translate-options">
+			<h1 class = "translate-option">HISTORIAL</h1>
+			<a href = "../learn/index.html">
+				<h1 class = "translate-option">APRENDE</h1>
+			</a>
+		</div>
+
+		<div class = "translate-section">
+			<div class = "from-translate-section">
+				<h1 class = "translate-button" onclick = "enableHover('from-translate-hover')">IDIOMA <span style= "color: #5CE1E6;"> | </span><span style = "font-weight: normal;">español</span> <span style= "color: #88D3FF;">V</span></h1>
+				<div id = "from-translate-hover" hidden = "true" class = "translate-hover"> 
+					<p class = "clickable-hover" onclick = "changeTranslate('es', 'to-translate-hover')">español</p>
+					<p class = "clickable-hover" onclick = "changeTranslate('qu', 'to-translate-hover')">quechua</p>
+					<p class = "clickable-hover" onclick = "changeTranslate('ay', 'to-translate-hover')">aimara</p>
+				</div>
+			
+				<p id = "from-translate-input" class = "translate-input" contenteditable= true>Hola mundo</p> 
+			</div>
+
+			<div class = "to-translate-section">
+				<h1 class = "translate-button" onclick = "enableHover('to-translate-hover')">IDIOMA TRADUCIDO<span style= "color: #5CE1E6;"> | </span> <span id = "language-name" style = "font-weight: normal;">quechua</span> <span style= "color: #88D3FF;">V</span></h1>
+				<div id = "to-translate-hover" hidden = "true" class = "translate-hover"> 
+					<p class = "clickable-hover" onclick = "changeTranslate('es', 'to-translate-hover')">español</p>
+					<p class = "clickable-hover" onclick = "changeTranslate('qu', 'to-translate-hover')">quechua</p>
+					<p class = "clickable-hover" onclick = "changeTranslate('ay', 'to-translate-hover')">aimara</p>
+				</div>
+				<p id= "to-translate-input" class = "translate-input" contenteditable= true>Allinllachu Mundo</p> 
+			</div>
+
+		</div>
+
+		<h1 id = "translate-submit-button" class = "translate-submit-button" onclick = "translateText()">TRADUCIR</h1>
+	</section>
+
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>T’ikraq - Register</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/forgotten-password.css">
+	<link rel="icon" href="../assets/logo.png" type="image/png">
+
+	<!-- Script to clear text when you click the input element and validate form -->
+	<script>
+		function clearText(element) {
+			element.textContent = " ";
+			element.removeAttribute("onclick");
+		}
+
+		function validateForm() {
+			var email = document.getElementById("email").value;
+
+
+			var emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+			if (email === "") {
+				alert("Todos los campos son obligatorios.");
+				return false;
+			}
+			if (!emailPattern.test(email)) {
+				alert("Por favor, ingresa un correo electrónico válido de Gmail (ejemplo@gmail.com).");
+				return false;
+			}
+			return true;
+		}
+	</script>
+</head>
+
+<body>
+	<a class="logo" href="../index.html">
+		<img src="../assets/logo.png" height="80" width="90"/> 
+	</a>
+	<section class="main_container">
+		<h1 class="title">Ingrese su correo</h1>
+		<div class="main_container">
+			<!-- Registration Form -->
+			<form onsubmit="return validateForm()" action="../login/index.html">
+				<div class="input">
+					<input type="email" id="email" class="input-text" placeholder="Ingresa tu correo electrónico" onclick="clearText(this)" required>
+				</div>
+
+				<button type="submit" class="submit-button" >Recuperar Contraseña</button>
+			</form>
+		</div>
+
+		<div class="extra-options">
+            <a href="../login/index.html">Regresar</a>
+			<a href="../index.html">Salir</a>
+		</div>
+	</section>
+</body>
+</html>

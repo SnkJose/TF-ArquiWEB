@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>T’ikraq - Learn</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/learn-page.css">
+	<link rel="icon" href="../assets/logo.png" type="image/png">
+	<link rel="icon" href="../assets/logo.png" type="image/png">
+
+</head>
+<script>
+	function toggleLessonList(){
+		
+		var element = document.getElementById("lesson-list");
+
+		if (element.hasAttribute("hidden")){
+			element.removeAttribute("hidden")
+		}else{
+			element.setAttribute("hidden", "true")
+		}
+
+	}
+
+	function changeLesson(number){
+		var element = document.getElementById("lesson-id");
+	
+		element.textContent = number;
+
+		var selectElement = document.getElementById("lesson-list");
+		selectElement.setAttribute("hidden", "true");
+
+		var fromElement = document.getElementById("from-select");
+		var toElement = document.getElementById("to-select");
+		
+		fromElement.textContent = number;
+
+		let newNumber = number + 1;
+		toElement.textContent = newNumber;
+	}
+
+</script>
+
+
+<body>
+	<header>
+		<a class = "logo" href = "../index.html">
+			<img src = "../assets/logo.png" height="80" width= "90"/> 
+		</a>
+		<h1 class = "page-title">Aprendizaje</h1>
+	</header>
+
+	<section class="main_container">
+		<div class = "status">
+			<div class = "learn-profile-section">
+				<h1 class = "learn-info">Aqui está tus aprendizajes</h1>
+				<div class = "learn-data">
+
+					<h1 id = "from-select">1</h1>
+					<p class = "learn-percentage">0% completado</p>
+					<h1 id = "to-select">2</h1>
+
+				</div>
+			</div>
+
+			<div class = "progress-section">
+				<h1 class = "progress-title">Progreso diario</h1>
+				<p class = "progress-data">50%</p>
+			</div>
+
+		</div>
+
+		<a class = "logo" href = "../lesson/index.html">
+			<p class = "learn-button" id = "start-lesson">Comenzar lección <span id = "lesson-id">1</span></p>
+		</a>
+		<div class = "learn-list-section">
+			<p class = "learn-button" id = "new-lesson" onclick= "toggleLessonList()">Seleccionar nueva lección</p>
+			<div class = "lesson-section" id = "lesson-list" hidden = "true">
+				<p class = "learn-button" onclick="changeLesson(1)">Lección 1</p>
+				<p class = "learn-button" onclick="changeLesson(2)" >Lección 2</p>
+				<p class = "learn-button" onclick="changeLesson(3)">Lección 3</p>
+				<p class = "learn-button" onclick="changeLesson(4)">Lección 4</p>
+				<p class = "learn-button" onclick="changeLesson(5)">Lección 5</p>
+				<p class = "learn-button" onclick="changeLesson(6)">Lección 6</p>
+				<p class = "learn-button" onclick="changeLesson(7)">Lección 7</p>
+				<p class = "learn-button" onclick="changeLesson(8)">Lección 8</p>
+				<p class = "learn-button" onclick="changeLesson(9)">Lección 9</p>
+				<p class = "learn-button" onclick="changeLesson(10)">Lección 10</p>
+				<p class = "learn-button" onclick="changeLesson(11)">Lección 11</p>
+				<p class = "learn-button" onclick="changeLesson(12)">Lección 12</p>
+				<p class = "learn-button" onclick="changeLesson(13)">Lección 13</p>
+
+			</div>
+		</div>
+		<p class = "learn-button">Mi progreso</p>
+
+		<div class = "data-section">
+			<div class = "time-section">
+				<div class = "time-title">
+					<img src = "../assets/clock.png" height="45" width= "50"/> 
+					<h1 class = "title-block">TIEMPO INVERTIDO</h1>
+				</div>
+				<h1 class = "time-about">-</h1>
+			</div>
+			
+			<div class = "statistic-section">
+				<h1 class = "statistic-title">ESTADISTICAS</h1>
+				<p class = "statistic-last-time">ultimos dias</p>
+				<p class = "statistic-data">Palabras aprendidas: -
+				Lecciones hechas: -
+				</p>
+
+			</div>
+
+		</div>
+
+	</section>
+
+
+
+</body>
+</html>
