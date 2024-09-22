@@ -2,4 +2,4 @@
 
 Landing page of Tikra'q 
 
-Pagina: https://davidbryanrodriguezsantos.github.io/landing-page/index.html
+Pagina: https://snkjose.github.io/TF-ArquiWEB/landing-page-main/index.html
