@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>T’ikraq - Home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/user-page.css">
+	<link rel="icon" href="../assets/logo.png" type="image/png">
+</head>
+
+
+<body>
+    <nav>
+        <a href="../indexA.html">
+            <img src="../assets/logo.png" height="70" width="80" alt="Logo" />
+        </a>
+        <div class="menu-container">
+            <a class="nav-block" href="../course/index.html">Cursos</a>
+            <a class="nav-block" href="../lessonA/index.html">Lecciones</a>
+            <a class="nav-block" href="../progress/index.html">Progresos</a>
+            <a class="nav-block" href="../language/index.html">Lenguas</a>
+            <a class="nav-block" href="../user/index.html">Usuarios</a>
+        </div>
+        <img class="menu" onclick="toggleOptionList()" src="../assets/lesson/menu.png" height="70" width="85" alt="Menu" />
+        <div class="option-list" id="option-list">
+            <p class="nav-block" ><a href="../course/index.html" class="e">Cursos</a></p>
+            <p class="nav-block" ><a href="../lessonA/index.html" class="e">Lecciones</a></p>
+            <p class="nav-block" ><a href="../progress/index.html" class="e">Progresos</a></p>
+            <p class="nav-block" ><a href="../language/index.html" class="e">Lenguas</a></p>
+            <p class="nav-block" ><a href="../user/index.html" class="e">Usuarios</a></p>
+        </div>
+    </nav>
+    
+    <section class="main_container">
+
+        <h1>Listar usuarios</h1>
+        
+        <table border="1" cellpadding="10" cellspacing="0" class="user_table">
+            <thead>
+                <tr>
+                    <th>Usuario ID</th>
+                    <th>Contraseña</th>
+                    <th>Correo Electrónico</th>
+                    <th>Idioma Preferido</th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>********</td>
+                    <td>usuario1@example.com</td>
+                    <td>Español</td>
+                    <td>Juan Pérez</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>********</td>
+                    <td>usuario2@example.com</td>
+                    <td>Inglés</td>
+                    <td>Jane Doe</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="list-button" onclick="showMessage()">Listar</button>
+               <div id="message" class="message" style="display:none;"></div>
+    </section>
+    
+    <script>
+        function showMessage() {
+            const messageDiv = document.getElementById('message');
+            messageDiv.innerText = 'Acción exitosa';
+            messageDiv.style.display = 'block'; 
+        }
+        function toggleOptionList() {
+            var element = document.getElementById("option-list");
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+
+        window.onresize = function() {
+            document.getElementById("option-list").style.display = "none";
+        };
+    </script>    
+</body>
+</html>
+

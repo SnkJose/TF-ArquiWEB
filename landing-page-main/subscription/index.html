@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>T’ikraq - Subscription</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/subscription-page.css">
+	<link rel="icon" href="../assets/logo.png" type="image/png">
+</head>
+
+<body>
+	  
+	<header>
+		<a class = "logo" href = "../index.html">
+		  <img src = "../assets/logo.png" height="80" width= "90"/>
+		</a>
+		<div class = "status">
+		  <h1 class = "page-title">Suscripcion</h1>
+		  <h1 class = "subscription-info">No tienes una subscripcion activa</h1>
+		  <p class = "subscription-desc">Fijate nuestros precios.</p>
+		</div>
+	</header>
+	  
+	<section class="main_container">
+		<div class = "subscriptions-list">
+		  	<div class = "sub-option">
+				<h1 class = "sub-title">FREE</h1>
+				<p class = "sub-desc">Caracteristicas incluidas:
+			
+				- Funciones básicas de traducción e idiomas limitados.
+				- Incluye anuncios.
+				</p>
+				<button class = "monthly-cost-option" onclick="redirigir()">GRATIS</button>
+		  	</div>
+		  	<div class = "sub-option">
+				<h1 class = "sub-title">STARTER</h1>
+				<p class = "sub-desc"> Caracteristicas incluidas:
+			
+				- Acceso a todas las funciones básicas de traducción.
+				- Mayor exactitud.
+				- Acceso a funciones de aprendizaje y actividades interactivas.
+				- Sin anuncios
+				</p>
+				<button class = "monthly-cost-option" onclick= "setSubmitMessage()">15PEN/MES</button>
+				<br>
+				<button class = "monthly-cost-option" onclick= "setSubmitMessage()">150PEN/MES</button>
+		  	</div>
+		  	<div class = "sub-option">
+				<h1 class = "sub-title">PRO</h1>
+				<p class = "sub-desc">Caracteristicas incluidas:
+			
+				- Acceso completo a todas las funciones avanzadas de traducción.
+				- Acceso a contenido exclusivo interactivo, versiones preliminares y soporte prioritario al cliente.
+				- Acceso a funciones de aprendizaje, actividades interactivas.
+				- Acceso a retroalimentaciones de hablantes nativos y eventos en línea cada cierto tiempo.
+				</p>
+				<button class = "monthly-cost-option" onclick= "setSubmitMessage()">35PEN/MES</button>
+				<br>
+				<button class = "monthly-cost-option" onclick= "setSubmitMessage()">350PEN/MES</button>
+			</div>
+		</div>
+	</section>
+	<p id = "submit-message" class = "submit-message"></p>
+	<script>
+	  
+		function setSubmitMessage(){
+		  document.getElementById("submit-message").textContent = "Su suscripcion ha sido activada.";
+		}
+	  
+		function clearText (element) {
+		  element.textContent = " ";
+		  element.removeAttribute("onclick");
+		}
+		function redirigir() {
+		  window.location.href = '../index.html'; // Cambia esta ruta al archivo que deseas
+		}
+	  
+	  
+	</script>
+	  
+	  
+	  
+	  
+
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+body{
+    font-family: Montserrat, sans-serif;
+
+}
+
+a{
+	color: black;
+	text-decoration: none;
+}
+
+.title-part{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.center{
+    flex-grow: 1;
+}
+
+h1.page-title{
+    
+	background: #88D3FF;
+	border: 10px solid #88D3FF;
+	border-radius: 20px;
+	padding: 0 10px;
+}
+
+section.settings-section{
+    margin-left: 2em;
+
+}
+h2.page-description{
+	
+    display: inline-block;
+    background-color: #ECFF6A;
+	border: 12px solid #ECFF6A;
+
+	border-radius: 30px;
+
+    margin-left: 1.5em;
+}
+
+
+section.option{
+
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    gap: 1.25em;
+
+}
+
+h1.option-button{
+    margin: 0;
+
+    text-align: center;
+
+    background-color: #F5A940;
+	border: 10px solid #F5A940;
+	border-radius: 50px;
+
+    width: 14em;
+
+}
+
+p.option-input{
+    margin: 0;
+
+    text-align: center;
+
+	background-color: #FFFD91;
+
+	border: 5px solid #FFFD91;
+	border-radius: 25px;
+    padding: 0.5em;
+    
+    width: 4.5em;
+}
+
+h1#disable-account{
+    margin-top: 14em;
+}

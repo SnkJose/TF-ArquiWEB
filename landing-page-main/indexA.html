@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>T’ikraq - Home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/homeA-page.css">
+	<link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+
+
+<body>
+
+	<nav>
+		<a href="index.html">
+            <img src="assets/logo.png" height="70" width="80" alt="Logo" />
+        </a>
+        <div class="menu-container">
+            <a class="nav-block" href="course/index.html">Cursos</a>
+            <a class="nav-block" href="lessonA/index.html">Lecciones</a>
+            <a class="nav-block" href="progress/index.html">Progresos</a>
+            <a class="nav-block" href="language/index.html">Lenguas</a>
+			<a class="nav-block" href="user/index.html">Usuarios</a>
+        </div>
+        <img class="menu" onclick="toggleOptionList()" src="assets/lesson/menu.png" height="70" width="85" alt="Menu" />
+        <div class="option-list" id="option-list">
+            <p class="nav-block" ><a href="course/index.html" class="e">Cursos</a></p>
+            <p class="nav-block" ><a href="lessonA/index.html" class="e">Lecciones</a></p>
+            <p class="nav-block" ><a href="progress/index.html" class="e">Progresos</a></p>
+            <p class="nav-block" ><a href="language/index.html" class="e">Lenguas</a></p>
+			<p class="nav-block" ><a href="user/index.html" class="e">Usuarios</a></p>
+        </div>
+	</nav>
+	<section  class="main_container">
+
+		<!-- Information -->
+		<div class = "web-info">
+		
+			<header>
+				<h1 class = "web-title">Panel de Administración</h1>
+			</header>
+			<p class = "web-description">Aquí puedes gestionar los cursos, lecciones, progresos y lenguas de la plataforma.</p>
+			
+	
+		</div>
+
+		<!-- Image background -->
+		<img class = "image" src = "assets/image.png" height="340" width= "670" /> 
+
+	</section>
+	<script>
+        function toggleOptionList() {
+            var element = document.getElementById("option-list");
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+
+        window.onresize = function() {
+            document.getElementById("option-list").style.display = "none";
+        };
+    </script>
+</body>
+</html>

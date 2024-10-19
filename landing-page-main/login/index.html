@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>T’ikraq - Login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/login-page.css">
+	<link rel="icon" href="../assets/logo.png" type="image/png">
+</head>
+
+
+<body>
+
+
+	<a class = "logo" href = "../index.html">
+		<img src = "../assets/logo.png" height="80" width= "90" /> 
+	</a>
+	<section class="main_container">
+		<h1 class = "title">Iniciar sesion</h1>
+		<form onsubmit="return validateForm()" action="../learn/index.html">
+			<div class="input">
+				<input type="email" id="email" class="input-text" placeholder="Ingresa tu correo electrónico" onclick="clearText(this)" required>
+				<input type="password" id="password" class="input-text" placeholder="Ingresa tu contraseña" onclick="clearText(this)" required>
+			</div>
+
+			<button type="submit" class="submit-button">Iniciar Sesion</button>
+		</form>
+		<div class = "extra-options">
+			<a href="../forgottenPassword/index.html">Perdiste la contraseña? Clic para recuperar</a>
+		</div>
+	</section>
+
+	<script>
+
+		function clearText (element) {
+			element.textContent = " ";
+			element.removeAttribute("onclick");
+		}
+		function validateForm() {
+			var email = document.getElementById("email").value;
+			
+			var password = document.getElementById("password").value;
+
+
+			var emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+			if (email === ""|| password === "" ) {
+				alert("Todos los campos son obligatorios.");
+				return false;
+			}
+			if (!emailPattern.test(email)) {
+				alert("Por favor, ingresa un correo electrónico válido de Gmail (ejemplo@gmail.com).");
+				return false;
+			}
+			
+			return true;
+		}
+	</script>
+
+</body>
+</html>

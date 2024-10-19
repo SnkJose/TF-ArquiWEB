@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>T’ikraq - Contact</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/contact-page.css">
+	<link rel="icon" href="../assets/logo.png" type="image/png">
+
+</head>
+
+<body>
+
+	<a href = "../index.html">
+		<img src = "../assets/logo.png" height="80" width= "90" /> 
+	</a>
+	<section class="main_container">
+		<h1 class = "title">Contactanos</h1>
+		<p> Ingresa estos datos:</p>
+		<div class="main_container">
+			<form onsubmit="return validateForm()">
+				<div class = "input">
+					<input class = "input-text" placeholder="Ingresa el titulo del contacto" onclick="clearText(this)" required>
+					<input class = "input-text" placeholder="Ingresa la descripción" onclick="clearText(this)" required>
+				</div>
+			</form>
+			<button class = "submit-button" onclick= "setSubmitMessage()">Contactar</button>
+			<p id = "submit-message" class = "submit-message"></p>
+		</div>
+
+	</section>
+	<script>
+
+		function setSubmitMessage(){
+			document.getElementById("submit-message").textContent = "Has enviado un mensaje a nuestro servicio de contacto.";
+		}
+
+		function clearText (element) {
+			element.textContent = " ";
+			element.removeAttribute("onclick");
+		}
+		function validateForm() {
+			var email = document.getElementById("email").value;
+			var name = document.getElementById("name").value;
+			var titulo = document.getElementById("titulo").value;
+			var descripcion = document.getElementById("descripcion").value;
+
+
+			var emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+			if (email === "" || name === "" || titulo === "" || descripcion === "") {
+				alert("Todos los campos son obligatorios.");
+				return false;
+			}
+			if (!emailPattern.test(email)) {
+				alert("Por favor, ingresa un correo electrónico válido de Gmail (ejemplo@gmail.com).");
+				return false;
+			}
+			return true;
+		}
+
+		
+	</script>
+
+
+
+</body>
+</html>

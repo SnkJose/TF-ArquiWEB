@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>T’ikraq - Register</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/register-page.css">
+	<link rel="icon" href="../assets/logo.png" type="image/png">
+	
+
+	<!-- Script to clear text when you click the input element and validate form -->
+	<script>
+		function clearText(element) {
+			element.textContent = " ";
+			element.removeAttribute("onclick");
+		}
+
+		function validateForm() {
+			var email = document.getElementById("email").value;
+			var confirmEmail = document.getElementById("confirm-email").value;
+			var password = document.getElementById("password").value;
+			var confirmPassword = document.getElementById("confirm-password").value;
+			var name = document.getElementById("name").value;
+
+			var emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+			if (name === "" || email === "" || confirmEmail === "" || password === "" || confirmPassword === "") {
+				alert("Todos los campos son obligatorios.");
+				return false;
+			}
+			if (!emailPattern.test(email)) {
+				alert("Por favor, ingresa un correo electrónico válido de Gmail (ejemplo@gmail.com).");
+				return false;
+			}
+			if (email !== confirmEmail) {
+				alert("Los correos electrónicos no coinciden.");
+				return false;
+			}
+			if (password !== confirmPassword) {
+				alert("Las contraseñas no coinciden.");
+				return false;
+			}
+			return true;
+		}
+	</script>
+</head>
+
+<body>
+	<a class="logo" href="../index.html">
+		<img src="../assets/logo.png" height="80" width="90"/> 
+	</a>
+	<section class="main_container">
+		<h1 class="title">Registro</h1>
+		<div class="main_container">
+			<!-- Registration Form -->
+			<form onsubmit="return validateForm()">
+				<div class="input">
+					<input type="text" id="name" class="input-text" placeholder="Ingresa tu nombre" onclick="clearText(this)" required>
+					<input type="email" id="email" class="input-text" placeholder="Ingresa tu correo electrónico" onclick="clearText(this)" required>
+					<input type="email" id="confirm-email" class="input-text" placeholder="Confirma tu correo electrónico" onclick="clearText(this)" required>
+					<input type="password" id="password" class="input-text" placeholder="Ingresa tu contraseña" onclick="clearText(this)" required>
+					<input type="password" id="confirm-password" class="input-text" placeholder="Confirma tu contraseña" onclick="clearText(this)" required>
+				</div>
+
+				<button type="submit" class="submit-button">Registrarte</button>
+			</form>
+		</div>
+
+		<div class="extra-options">
+			<a href="../index.html">Entrar como invitado</a>
+			<a href="../login/index.html">¿Tienes cuenta? Iniciar sesión aqui</a>
+
+			<a href="../indexA.html">Entrar como usuario administrador</a>
+		</div>
+	</section>
+</body>
+</html>

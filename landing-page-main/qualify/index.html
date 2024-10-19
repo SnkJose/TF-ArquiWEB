@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>T’ikraq - Calificación</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/contact-page.css">
+	<link rel="icon" href="../assets/logo.png" type="image/png">
+</head>
+
+<body>
+
+	<a href="../index.html">
+		<img src="../assets/logo.png" height="80" width="90" alt="Logo T’ikraq" /> 
+	</a>
+
+	<section class="main_container">
+		<h1 class="title">Calificación</h1>
+		<p>Califícanos aquí:</p>
+
+		<div class="main_container">
+			<form onsubmit="validateForm(event)">
+				<div class="input">
+					<input id="calificacion" class="input-text" type="number" placeholder="Coloca una calificación del 1 al 10" min="1" max="10" required>
+				</div>
+				<button class="submit-button" type="submit">Enviar</button>
+			</form>
+			<p id="submit-message" class="submit-message"></p>
+		</div>
+	</section>
+
+	<script>
+		function setSubmitMessage() {
+			document.getElementById("submit-message").textContent = "Has enviado tu calificación. ¡Gracias por tu feedback!";
+		}
+
+		function validateForm(event) {
+			event.preventDefault(); // Evita el comportamiento predeterminado de envío del formulario
+
+			var calificacion = document.getElementById("calificacion").value;
+
+			if (calificacion === "") {
+				alert("Por favor, ingresa una calificación.");
+				return false;
+			}
+
+			if (isNaN(calificacion) || calificacion < 1 || calificacion > 10) {
+				alert("Por favor, ingresa una calificación válida (entre 1 y 10).");
+				return false;
+			}
+
+			// Mostrar mensaje de enviado
+			setSubmitMessage();
+			return true;
+		}
+	</script>
+
+</body>
+</html>

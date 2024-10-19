@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>T’ikraq - Translate</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../styles/translate-page.css">
+	<link rel="icon" href="../assets/logo.png" type="image/png">
+</head>
+
+
+<body>
+	<header>
+		<div class = "header-about-section">
+			<a class = "logo" href = "../index.html">
+				<img src = "../assets/logo.png" height="80" width= "90"/> 
+			</a>
+			<h1 class = "page-title">Panel de control</h1>
+		</div>
+		<div class = "header-profile-section">
+			<a class = "logo" href = "../settings/index.html">
+				<img src = "../assets/config.png" height="80" width= "90"/> 
+			</a>
+			<a href="../editar-perfil/index.html">
+				<img src = "../assets/profile.png" height="80" width= "90"/> 
+			</a>
+			
+		</div>
+	</header>
+	<section>
+		<div class="translate-options">
+		  <h1 class="translate-option">HISTORIAL</h1>
+		  <a [routerLink]="'/learn'">
+			<h1 class="translate-option">APRENDE</h1>
+		  </a>
+		</div>
+	  
+		<div class="translate-section">
+		  <div class="from-translate-section">
+			<label for="from-language">IDIOMA</label>
+			<select id="from-language" class="scrollable-select" onchange="updateFromLanguage()">
+			  <option value="af">Africano</option>
+			  <option value="sq">Albanés</option>
+			  <option value="am">Amárico</option>
+			  <option value="ar">Árabe</option>
+			  <option value="hy">Armenio</option>
+			  <option value="az">Azerbaiyano</option>
+			  <option value="eu">Vasco</option>
+			  <option value="be">Bielorruso</option>
+			  <option value="bn">Bengalí</option>
+			  <option value="bs">Bosnio</option>
+			  <option value="bg">Búlgaro</option>
+			  <option value="ca">Catalán</option>
+			  <option value="ceb">Cebuano</option>
+			  <option value="ny">Chichewa</option>
+			  <option value="zh-CN">Chino (Simplificado)</option>
+			  <option value="zh-TW">Chino (Tradicional)</option>
+			  <option value="co">Corso</option>
+			  <option value="hr">Croata</option>
+			  <option value="cs">Checo</option>
+			  <option value="da">Danés</option>
+			  <option value="nl">Neerlandés</option>
+			  <option value="en">Inglés</option>
+			  <option value="eo">Esperanto</option>
+			  <option value="et">Estonio</option>
+			  <option value="tl">Filipino</option>
+			  <option value="fi">Finlandés</option>
+			  <option value="fr">Francés</option>
+			  <option value="fy">Frisón</option>
+			  <option value="gl">Gallego</option>
+			  <option value="ka">Georgiano</option>
+			  <option value="de">Alemán</option>
+			  <option value="el">Griego</option>
+			  <option value="gu">Guyaratí</option>
+			  <option value="ht">Criollo haitiano</option>
+			  <option value="ha">Hausa</option>
+			  <option value="haw">Hawaiano</option>
+			  <option value="iw">Hebreo</option>
+			  <option value="hi">Hindi</option>
+			  <option value="hmn">Hmong</option>
+			  <option value="hu">Húngaro</option>
+			  <option value="is">Islandés</option>
+			  <option value="ig">Igbo</option>
+			  <option value="id">Indonesio</option>
+			  <option value="ga">Irlandés</option>
+			  <option value="it">Italiano</option>
+			  <option value="ja">Japonés</option>
+			  <option value="jw">Javanés</option>
+			  <option value="kn">Canarés</option>
+			  <option value="kk">Kazajo</option>
+			  <option value="km">Camboyano</option>
+			  <option value="ko">Coreano</option>
+			  <option value="ku">Kurdo (Kurmanji)</option>
+			  <option value="ky">Kirguís</option>
+			  <option value="lo">Lao</option>
+			  <option value="la">Latín</option>
+			  <option value="lv">Letón</option>
+			  <option value="lt">Lituano</option>
+			  <option value="lb">Luxemburgués</option>
+			  <option value="mk">Macedonio</option>
+			  <option value="mg">Malgache</option>
+			  <option value="ms">Malayo</option>
+			  <option value="ml">Malayalam</option>
+			  <option value="mt">Maltés</option>
+			  <option value="mi">Maorí</option>
+			  <option value="mr">Maratí</option>
+			  <option value="mn">Mongol</option>
+			  <option value="my">Birmano</option>
+			  <option value="ne">Nepalí</option>
+			  <option value="no">Noruego</option>
+			  <option value="ps">Pastún</option>
+			  <option value="fa">Persa</option>
+			  <option value="pl">Polaco</option>
+			  <option value="pt">Portugués</option>
+			  <option value="pa">Panyabí</option>
+			  <option value="ro">Rumano</option>
+			  <option value="ru">Ruso</option>
+			  <option value="sm">Samoano</option>
+			  <option value="gd">Gaélico escocés</option>
+			  <option value="sr">Serbio</option>
+			  <option value="st">Sesotho</option>
+			  <option value="sn">Shona</option>
+			  <option value="sd">Sindhi</option>
+			  <option value="si">Cingalés</option>
+			  <option value="sk">Eslovaco</option>
+			  <option value="sl">Esloveno</option>
+			  <option value="so">Somalí</option>
+			  <option value="es">Español</option>
+			  <option value="su">Sundanés</option>
+			  <option value="sw">Suajili</option>
+			  <option value="sv">Sueco</option>
+			  <option value="tg">Tayiko</option>
+			  <option value="ta">Tamil</option>
+			  <option value="te">Telugú</option>
+			  <option value="th">Tailandés</option>
+			  <option value="tr">Turco</option>
+			  <option value="uk">Ucraniano</option>
+			  <option value="ur">Urdu</option>
+			  <option value="uz">Uzbeko</option>
+			  <option value="vi">Vietnamita</option>
+			  <option value="cy">Galés</option>
+			  <option value="xh">Xhosa</option>
+			  <option value="yi">Yidis</option>
+			  <option value="yo">Yoruba</option>
+			  <option value="zu">Zulú</option>
+			</select>
+	  
+			<p id="from-translate-input" class="translate-input" contenteditable="true">Hola mundo</p>
+		  </div>
+	  
+		  <div class="to-translate-section">
+			<label for="to-language">IDIOMA TRADUCIDO</label>
+			<select id="to-language" class="scrollable-select" onchange="updateFromLanguage()">
+			  <option value="af">Africano</option>
+			  <option value="sq">Albanés</option>
+			  <option value="am">Amárico</option>
+			  <option value="ar">Árabe</option>
+			  <option value="hy">Armenio</option>
+			  <option value="az">Azerbaiyano</option>
+			  <option value="eu">Vasco</option>
+			  <option value="be">Bielorruso</option>
+			  <option value="bn">Bengalí</option>
+			  <option value="bs">Bosnio</option>
+			  <option value="bg">Búlgaro</option>
+			  <option value="ca">Catalán</option>
+			  <option value="ceb">Cebuano</option>
+			  <option value="ny">Chichewa</option>
+			  <option value="zh-CN">Chino (Simplificado)</option>
+			  <option value="zh-TW">Chino (Tradicional)</option>
+			  <option value="co">Corso</option>
+			  <option value="hr">Croata</option>
+			  <option value="cs">Checo</option>
+			  <option value="da">Danés</option>
+			  <option value="nl">Neerlandés</option>
+			  <option value="en">Inglés</option>
+			  <option value="eo">Esperanto</option>
+			  <option value="et">Estonio</option>
+			  <option value="tl">Filipino</option>
+			  <option value="fi">Finlandés</option>
+			  <option value="fr">Francés</option>
+			  <option value="fy">Frisón</option>
+			  <option value="gl">Gallego</option>
+			  <option value="ka">Georgiano</option>
+			  <option value="de">Alemán</option>
+			  <option value="el">Griego</option>
+			  <option value="gu">Guyaratí</option>
+			  <option value="ht">Criollo haitiano</option>
+			  <option value="ha">Hausa</option>
+			  <option value="haw">Hawaiano</option>
+			  <option value="iw">Hebreo</option>
+			  <option value="hi">Hindi</option>
+			  <option value="hmn">Hmong</option>
+			  <option value="hu">Húngaro</option>
+			  <option value="is">Islandés</option>
+			  <option value="ig">Igbo</option>
+			  <option value="id">Indonesio</option>
+			  <option value="ga">Irlandés</option>
+			  <option value="it">Italiano</option>
+			  <option value="ja">Japonés</option>
+			  <option value="jw">Javanés</option>
+			  <option value="kn">Canarés</option>
+			  <option value="kk">Kazajo</option>
+			  <option value="km">Camboyano</option>
+			  <option value="ko">Coreano</option>
+			  <option value="ku">Kurdo (Kurmanji)</option>
+			  <option value="ky">Kirguís</option>
+			  <option value="lo">Lao</option>
+			  <option value="la">Latín</option>
+			  <option value="lv">Letón</option>
+			  <option value="lt">Lituano</option>
+			  <option value="lb">Luxemburgués</option>
+			  <option value="mk">Macedonio</option>
+			  <option value="mg">Malgache</option>
+			  <option value="ms">Malayo</option>
+			  <option value="ml">Malayalam</option>
+			  <option value="mt">Maltés</option>
+			  <option value="mi">Maorí</option>
+			  <option value="mr">Maratí</option>
+			  <option value="mn">Mongol</option>
+			  <option value="my">Birmano</option>
+			  <option value="ne">Nepalí</option>
+			  <option value="no">Noruego</option>
+			  <option value="ps">Pastún</option>
+			  <option value="fa">Persa</option>
+			  <option value="pl">Polaco</option>
+			  <option value="pt">Portugués</option>
+			  <option value="pa">Panyabí</option>
+			  <option value="ro">Rumano</option>
+			  <option value="ru">Ruso</option>
+			  <option value="sm">Samoano</option>
+			  <option value="gd">Gaélico escocés</option>
+			  <option value="sr">Serbio</option>
+			  <option value="st">Sesotho</option>
+			  <option value="sn">Shona</option>
+			  <option value="sd">Sindhi</option>
+			  <option value="si">Cingalés</option>
+			  <option value="sk">Eslovaco</option>
+			  <option value="sl">Esloveno</option>
+			  <option value="so">Somalí</option>
+			  <option value="es">Español</option>
+			  <option value="su">Sundanés</option>
+			  <option value="sw">Suajili</option>
+			  <option value="sv">Sueco</option>
+			  <option value="tg">Tayiko</option>
+			  <option value="ta">Tamil</option>
+			  <option value="te">Telugú</option>
+			  <option value="th">Tailandés</option>
+			  <option value="tr">Turco</option>
+			  <option value="uk">Ucraniano</option>
+			  <option value="ur">Urdu</option>
+			  <option value="uz">Uzbeko</option>
+			  <option value="vi">Vietnamita</option>
+			  <option value="cy">Galés</option>
+			  <option value="xh">Xhosa</option>
+			  <option value="yi">Yidis</option>
+			  <option value="yo">Yoruba</option>
+			  <option value="zu">Zulú</option>
+			</select>
+	  
+			<p id="to-translate-input" class="translate-input" contenteditable="true">Allinllachu Mundo</p>
+		  </div>
+		</div>
+	  
+		<h1 id="translate-submit-button" class="translate-submit-button" onclick="translateText()">TRADUCIR</h1>
+	</section>
+	<script>
+
+		var toTranslate = "qu";
+
+		function enableHover(hoverId) {
+			
+			var element = document.getElementById(hoverId);
+			if (element.hasAttribute("hidden")){
+				element.removeAttribute("hidden");
+			}else{
+				element.setAttribute("hidden", "true");
+
+			}
+
+		}
+
+		function translateText(){
+			
+			var text = document.getElementById("from-translate-input").textContent
+			var request = new XMLHttpRequest();
+			var link = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=es&tl=" + toTranslate +  "&dt=t&q=";
+			console.log("Text to translate: " + text);
+			request.open("POST", link + encodeURIComponent(text));
+
+			request.send();
+
+			request.onload = function() {
+
+  				if (request.status === 200) {
+    			
+    				var translationResult = JSON.parse(request.responseText)[0][0][0];
+    				document.getElementById("to-translate-input").textContent = translationResult;
+    				console.log("Translated!")
+
+  				} else {
+	   				console.log("Error: " + request.statusText);
+  				}
+			};
+		}
+
+		function changeTranslate(language, hoverId){
+
+			var element = document.getElementById(hoverId);
+			element.setAttribute("hidden", "true");
+			
+			toTranslate = language;
+
+			var languageName = "";
+
+			switch(toTranslate){
+				case "qu":
+					languageName = "quechua";
+					break;
+				case "ay":
+					languageName = "aymara";
+					break;
+				case "es":
+					languageName = "español";
+					break;
+				default:
+					console.log("Error: " + toTranslate);
+			}
+
+
+			var languageElement = document.getElementById("language-name");
+
+			languageElement.textContent = languageName;
+
+			console.log("Changed language: " + toTranslate);
+
+		}
+	</script>
+
+
+</body>
+</html>
